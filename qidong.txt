@@ -1,0 +1,4 @@
+npm run dev:all
+
+
+http://localhost:5173/

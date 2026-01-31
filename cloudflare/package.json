@@ -1,0 +1,19 @@
+{
+    "name": "huangdi-cloudflare",
+    "version": "1.0.0",
+    "description": "Cloudflare Workers backend for 皇帝模拟器",
+    "private": true,
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy",
+        "tail": "wrangler tail",
+        "db:create": "wrangler d1 create huangdi-db",
+        "db:init": "wrangler d1 execute huangdi-db --file=schema.sql",
+        "db:seed": "wrangler d1 execute huangdi-db --file=seed.sql",
+        "db:query": "wrangler d1 execute huangdi-db --command"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20241127.0",
+        "wrangler": "^3.94.0"
+    }
+}
